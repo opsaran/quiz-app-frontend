@@ -17,7 +17,9 @@ function ShowResults(props) {
 
   useEffect(() => {
     axios
-      .post("/api/creators/newuser", { userdata: user })
+      .post(`${process.env.REACT_APP_API_URL}/api/creators/newuser`, {
+        userdata: user,
+      })
       .then(() => {
         alert("data uploaded successfully");
       })
@@ -29,7 +31,7 @@ function ShowResults(props) {
   const [usersample, setUsersample] = useState([]);
   useEffect(() => {
     axios
-      .get("/api/creators/usersample")
+      .get(`${process.env.REACT_APP_API_URL}/api/creators/usersample`)
       .then((data) => {
         setUsersample((usersample) => [...usersample, ...data.data.data]);
       })

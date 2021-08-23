@@ -14,7 +14,7 @@ function Home() {
 
   const fetchtopics = useCallback(() => {
     return axios
-      .get(`/api/creators/topics/`)
+      .get(`${process.env.REACT_APP_API_URL}/api/creators/topics/`)
       .then((data) => {
         return data.data.data.map((entry) => {
           switch (entry.topic) {

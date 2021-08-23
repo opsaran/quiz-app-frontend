@@ -15,7 +15,9 @@ function SubmitQuiz() {
   const history = useHistory();
   const quizsubmithandler = () => {
     axios
-      .post("/api/creators/", { userquiz: userquiz })
+      .post(`${process.env.REACT_APP_API_URL}/api/creators/`, {
+        userquiz: userquiz,
+      })
       .then((data) => {
         setIspostingloaded(true);
         history.push({ pathname: "/createquiz/congrats" });

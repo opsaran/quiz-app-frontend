@@ -32,7 +32,9 @@ function AttemptQuestions() {
   //fetching random quiz
   useEffect(() => {
     axios
-      .get(`/api/creators/randomquiz/${topicoption}`)
+      .get(
+        `${process.env.REACT_APP_API_URL}/api/creators/randomquiz/${topicoption}`
+      )
       .then((response) => {
         dispatch({
           type: "Addrandomquiz",
