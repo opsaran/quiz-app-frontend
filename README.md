@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Quiz App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Goals:
 
-## Available Scripts
+1. To build an all-round quiz app which lets you attempt quiz and create quiz.
+2. My main focus was to try different ways i can write code while not worrying about how it would look.
+3. Keep it minimal as possible.
+4. Style using vanilla CSS.
+5. Deploy frontend on netlify and backend on heroku using different deployment methods.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Tech stack for frontend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. HTML5
+2. CSS3
+3. JS
+4. React
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Process
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. I created a mockup of all the pages in my notebook and roughly how they would look.
+2. Started with creating static elements and made it dynamic while connecting with backend.
+3. I honestly didn't care about Error boundaries initially but as I progressed further into the project, I realised it was very crucial.
+4. Styled everything later when the skeleton was working the way I wanted.
+5. Major focus while styling the elements was to make it look minimal but pleasing to eye(took some UI/UX pills from instagram)
+6. Deployed the frontend on Netlify using Github as CI?CD pipeline.
+7. I still want to make some changes, let's see.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Challenges
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. I earlier hurdles whiles working with forms but cleared after a lot of tinkering and a bit of internet help.
+2. State management was an issue and I used Context API for it, could have used Redux as well.
+3. Setting up error boundaries was neglected initially that pushed me into the mud later but made my way anyhow.
+4. While deploying I had to juggle whether to use environment variables or not as I stuck at an error due to a spelling mistake (Shame).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Results
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Why don't you see it on [here=>](https://opsaran-quizapp.netlify.app/)
