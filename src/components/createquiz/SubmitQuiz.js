@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../axios";
 import { useContext } from "react";
 import { useHistory } from "react-router";
 import { Redirect } from "react-router-dom";
@@ -15,7 +15,7 @@ function SubmitQuiz() {
   const history = useHistory();
   const quizsubmithandler = () => {
     axios
-      .post(`${process.env.REACT_APP_API_URL}/api/creators/`, {
+      .post(`/api/creators/`, {
         userquiz: userquiz,
       })
       .then((data) => {

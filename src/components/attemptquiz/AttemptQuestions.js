@@ -3,7 +3,7 @@ import Loadinganimation from "../subcomponents/Loadinganimation";
 import { useEffect, useContext, useState } from "react";
 import { Redirect, useHistory } from "react-router-dom";
 import { AppContext } from "../../context/Context";
-import axios from "axios";
+import axios from "../axios";
 import Errorpage from "../subcomponents/Errorpage";
 
 function AttemptQuestions() {
@@ -32,9 +32,7 @@ function AttemptQuestions() {
   //fetching random quiz
   useEffect(() => {
     axios
-      .get(
-        `${process.env.REACT_APP_API_URL}/api/creators/randomquiz/${topicoption}`
-      )
+      .get(`/api/creators/randomquiz/${topicoption}`)
       .then((response) => {
         dispatch({
           type: "Addrandomquiz",

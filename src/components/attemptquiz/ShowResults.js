@@ -2,7 +2,7 @@ import "./ShowResults.css";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, Redirect, useHistory } from "react-router-dom";
 import { AppContext } from "../../context/Context";
-import axios from "axios";
+import axios from "../axios";
 function ShowResults(props) {
   // const { state } = useLocation();
   // const { yourname, topicoption } = state;
@@ -17,7 +17,7 @@ function ShowResults(props) {
 
   useEffect(() => {
     axios
-      .post(`${process.env.REACT_APP_API_URL}/api/creators/newuser`, {
+      .post(`/api/creators/newuser`, {
         userdata: user,
       })
       .then(() => {
@@ -31,7 +31,7 @@ function ShowResults(props) {
   const [usersample, setUsersample] = useState([]);
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/api/creators/usersample`)
+      .get(`/api/creators/usersample`)
       .then((data) => {
         setUsersample((usersample) => [...usersample, ...data.data.data]);
       })

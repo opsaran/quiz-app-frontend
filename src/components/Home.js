@@ -1,6 +1,6 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import axios from "axios";
+import axios from "./axios";
 import { AppContext } from "../context/Context";
 // function
 function Home() {
@@ -14,7 +14,7 @@ function Home() {
 
   const fetchtopics = useCallback(() => {
     return axios
-      .get(`${process.env.REACT_APP_API_URL}/api/creators/topics/`)
+      .get(`/api/creators/topics/`)
       .then((data) => {
         return data.data.data.map((entry) => {
           switch (entry.topic) {
