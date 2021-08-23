@@ -1,0 +1,104 @@
+.addquestions {
+  height: fit-content;
+}
+.addquestions-top-wrapper > h3 {
+  margin-top: 0;
+  color: var(--secondary-subtitle-color);
+}
+
+.addquestions-top-wrapper > button {
+  float: right;
+  transform: translateY(-4rem);
+  padding: 0.3rem 0.3rem;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+
+.textarea-wrapper {
+  position: relative;
+  margin: 1.3rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.textarea-input {
+  appearance: none;
+  border: none;
+  background: none;
+  border-bottom: 2px solid purple;
+  width: 75%;
+  letter-spacing: 0.06rem;
+  font-size: 1rem;
+}
+
+.textarea-input:focus,
+.textarea-input:valid {
+  outline: none;
+}
+
+.textarea-wrapper > label {
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.addquestions .input:focus ~ label > span,
+.addquestions .input:valid ~ label > span {
+  transform: scale(0.8) translateX(-0.5rem);
+}
+
+.addoption-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.radio-wrapper {
+  position: absolute;
+  width: 10%;
+  /* left: 10rem; */
+  transform: translate(10%, -3vh);
+}
+
+.radio-input {
+  display: none;
+}
+
+.radio-wrapper label {
+  position: absolute;
+  width: 3rem;
+  height: 3vh;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+}
+
+.radio-wrapper span::before {
+  content: "";
+  height: 2.8vh;
+  width: 2.8vh;
+  border-radius: 50%;
+  position: absolute;
+  background: rgb(146, 5, 123);
+  left: 0;
+  transition: transform 200ms ease-in;
+}
+
+.radio-input:checked ~ label > span::before {
+  transform: translateX(172%);
+}
+
+@media (min-width: 1025px) {
+  .radio-wrapper {
+    transform: translate(80%, -3vh);
+  }
+}
+
+.addquestions-buttons {
+  margin: 0rem 1rem 1rem;
+
+  padding: 0 2rem;
+}
+
+.addquestions-buttons button {
+  margin: 5% 10%;
+}

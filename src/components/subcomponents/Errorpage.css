@@ -1,0 +1,25 @@
+.errorpage > h1 {
+  font-size: 3.5rem;
+  background-image: var(--primary-color-gradient);
+  background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  animation: background-move 2s linear infinite;
+}
+
+.errorpage > h2 {
+  font-size: 2rem;
+  color: rgb(226, 32, 74);
+}
+
+@keyframes background-move {
+  0% {
+    background-position: right;
+  }
+  50% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}

@@ -1,0 +1,90 @@
+:root {
+  --body-color: rgba(0, 0, 0, 0.1);
+  --primary-color-gradient: linear-gradient(90deg, purple, rgb(204, 27, 86));
+}
+.loading {
+  width: 70%;
+  height: var(--primary-card-height);
+  margin: 1rem auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading > div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading > div > div {
+  position: relative;
+  width: 0px;
+  height: 0px;
+
+  animation: rotate-balls 2s linear infinite;
+}
+
+.loading > div > div > div {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  transform: translate(-5px, -5px);
+
+  animation: balls-color-rotate 2s linear infinite;
+}
+
+.loading > div > div > .bubble1 {
+  top: -50px;
+}
+
+.loading > div > div > .bubble2 {
+  top: -35.355339px;
+  left: 35.355339px;
+}
+.loading > div > div > .bubble3 {
+  left: 50px;
+}
+.loading > div > div > .bubble4 {
+  top: 35.355339px;
+  left: 35.355339px;
+}
+.loading > div > div > .bubble5 {
+  top: 50px;
+}
+.loading > div > div > .bubble6 {
+  top: 35.355339px;
+  left: -35.355339px;
+}
+.loading > div > div > .bubble7 {
+  left: -50px;
+}
+.loading > div > div > .bubble8 {
+  top: -35.355339px;
+  left: -35.355339px;
+}
+
+@keyframes rotate-balls {
+  0% {
+    transform: rotateZ(0deg);
+    transform-origin: center;
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+    transform-origin: center;
+  }
+}
+
+@keyframes balls-color-rotate {
+  0% {
+    background: purple;
+  }
+  100% {
+    background: red;
+  }
+}
